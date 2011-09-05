@@ -29,7 +29,7 @@
 	NSString *nextText;
 }
 
-@property (nonatomic, retain) NoteView *noteView;
+@property (nonatomic, strong) NoteView *noteView;
 @property (nonatomic, copy) NSString *nextText;
 
 @end

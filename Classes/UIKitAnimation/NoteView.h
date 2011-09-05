@@ -23,11 +23,10 @@
 //
 
 @interface NoteView : UIView {
-	id delegate;
 	UITextView *textView;
 }
 
-@property (nonatomic, assign) id<NSObject> delegate;
+@property (nonatomic, weak) id<NSObject> delegate;
 @property (nonatomic, copy) NSString *text;
 
 @end

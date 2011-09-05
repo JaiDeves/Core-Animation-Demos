@@ -42,20 +42,20 @@
 	CGPoint arcCenter = CGPointMake(radius, radius);
 	
     // Create a UIBezierPath for Pacman's open state
-	pacmanOpenPath = [[UIBezierPath bezierPathWithArcCenter:arcCenter
+	pacmanOpenPath = [UIBezierPath bezierPathWithArcCenter:arcCenter
 															   radius:radius 
 														   startAngle:DEGREES_TO_RADIANS(35) 
 															 endAngle:DEGREES_TO_RADIANS(315)
-															clockwise:YES] retain];	
+															clockwise:YES];	
 	[pacmanOpenPath addLineToPoint:arcCenter];
 	[pacmanOpenPath closePath];
 	
     // Create a UIBezierPath for Pacman's close state
-	pacmanClosedPath = [[UIBezierPath bezierPathWithArcCenter:arcCenter
+	pacmanClosedPath = [UIBezierPath bezierPathWithArcCenter:arcCenter
 															   radius:radius 
 														   startAngle:DEGREES_TO_RADIANS(1) 
 															 endAngle:DEGREES_TO_RADIANS(359) 
-															clockwise:YES] retain];
+															clockwise:YES];
 	[pacmanClosedPath addLineToPoint:arcCenter];
 	[pacmanClosedPath closePath];	
 	
@@ -72,7 +72,6 @@
 	SEL startSelector = @selector(startAnimation);
 	UIGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:startSelector];
 	[self.view addGestureRecognizer:recognizer];
-	[recognizer release];
 	
     // start animation after short delay
 	[self performSelector:startSelector withObject:nil afterDelay:1.0];
@@ -109,10 +108,5 @@
 	[shapeLayer addAnimation:moveAnimation forKey:@"moveAnimation"];
 }
 
-- (void)dealloc {
-    CARelease(pacmanOpenPath);
-    CARelease(pacmanClosedPath);
-    [super dealloc];
-}
 
 @end

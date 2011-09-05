@@ -69,9 +69,5 @@
 	[textView setText:newText];
 }
 
-- (void)dealloc {
-    CARelease(textView);
-    [super dealloc];
-}
 
 @end

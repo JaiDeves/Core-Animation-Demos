@@ -76,7 +76,6 @@ static const CGFloat curve = 5.0;
 	
 	UIGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(togglePath)];
 	[self.view addGestureRecognizer:tapRecognizer];
-	[tapRecognizer release];
 }
 
 - (void)togglePath {

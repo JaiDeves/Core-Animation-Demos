@@ -42,7 +42,6 @@
 		
 	UIGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(fadeIt)];
 	[self.view addGestureRecognizer:recognizer];
-	[recognizer release];
 }
 
 - (void)fadeIt {

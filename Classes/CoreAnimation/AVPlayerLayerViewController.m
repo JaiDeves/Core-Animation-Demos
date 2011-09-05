@@ -91,8 +91,6 @@
 
 - (void)dealloc {
 	[self.player pause];
-	self.player = nil;
-	[super dealloc];
 }
 
 @synthesize player;

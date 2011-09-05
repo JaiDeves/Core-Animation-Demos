@@ -32,7 +32,7 @@
 }
 
 - (UIGestureRecognizer *)createTapRecognizerWithSelector:(SEL)selector {
-    return [[[UITapGestureRecognizer alloc] initWithTarget:self action:selector] autorelease];
+    return [[UITapGestureRecognizer alloc] initWithTarget:self action:selector];
 }
 
 - (void)viewDidLoad {
@@ -64,10 +64,5 @@
 	}];
 }
 
-- (void)dealloc {
-    CARelease(fadeMeView);
-    CARelease(moveMeView);
-    [super dealloc];
-}
 
 @end

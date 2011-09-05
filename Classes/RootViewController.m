@@ -109,7 +109,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
@@ -126,14 +126,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSArray *values = [self valuesForSection:indexPath.section];
 	Class clazz = [values objectAtIndex:indexPath.row];
-	id controller = [[[clazz alloc] init] autorelease];
+	id controller = [[clazz alloc] init];
 	[self.navigationController pushViewController:controller animated:YES];
 }
 
-- (void)dealloc {
-    CARelease(items);
-    [super dealloc];
-}
 
 @end
 

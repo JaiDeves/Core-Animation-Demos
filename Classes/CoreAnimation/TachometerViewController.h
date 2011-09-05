@@ -33,6 +33,6 @@
 	CALayer *pinLayer;
 }
 
-@property (nonatomic, retain) AVAudioPlayer *audioPlayer;
+@property (nonatomic, strong) AVAudioPlayer *audioPlayer;
 
 @end

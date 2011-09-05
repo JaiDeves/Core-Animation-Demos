@@ -30,7 +30,7 @@
 	UISwitch *actionsSwitch;
 }
 
-@property (nonatomic, retain) IBOutlet UISwitch *actionsSwitch;
+@property (nonatomic, strong) IBOutlet UISwitch *actionsSwitch;
 
 - (IBAction)toggleCornerRadius;
 - (IBAction)toggleBorder;

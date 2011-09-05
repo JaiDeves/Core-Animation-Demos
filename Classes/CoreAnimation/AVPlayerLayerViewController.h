@@ -31,6 +31,6 @@
 	AVPlayer *player;
 }
 
-@property (nonatomic, retain) AVPlayer *player;
+@property (nonatomic, strong) AVPlayer *player;
 
 @end

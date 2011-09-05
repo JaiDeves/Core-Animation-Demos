@@ -57,8 +57,6 @@
 	UIGestureRecognizer *backViewTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(flipViews)];
 	[frontView addGestureRecognizer:frontViewTapRecognizer];
 	[backView addGestureRecognizer:backViewTapRecognizer];
-	[frontViewTapRecognizer release];
-	[backViewTapRecognizer release];
 }
 
 - (void)flipViews {
@@ -74,10 +72,7 @@
 }
 
 - (void)dealloc {
-	[frontView release];
-	[backView release];
 	[UIApplication sharedApplication].keyWindow.backgroundColor = [UIColor whiteColor];
-    [super dealloc];
 }
 
 
